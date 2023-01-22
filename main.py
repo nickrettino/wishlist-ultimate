@@ -8,17 +8,16 @@ def create_app():
     """use Bootsrap"""
     app = Flask(__name__)
     Bootstrap(app)
-
-    @app.route("/")
-    def home_page():
-        """this is the route for the homepage of the website"""
-
-        return render_template("index.html")
-
     return app
 
 
-app = create_app()
+frontend = create_app()
+
+
+@frontend.route("/")
+def homepage():
+    return render_template("index.html")
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    frontend.run(debug=True)
