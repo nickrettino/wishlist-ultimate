@@ -21,7 +21,29 @@ img {
 
 }
 
-.login-box {}
+.gift_img {
+    position: relative;
+}
+
+.button {
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: bold;
+    background-color: #FECEAB;
+    color: #E84A5F;
+    border-color: #FF847C;
+}
+
+.button-container {
+    position: absolute;
+    text-align: center;
+    top: 19rem;
+    left: 48rem;
+
+}
+
+.button-container::before {
+    display: block;
+}
 
 /* color scheme */
 /* green 99B898 */
