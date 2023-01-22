@@ -4,4 +4,27 @@ body {
 
 h1 {
     color: #E84A5F;
+    font-family: 'Mountains of Christmas', cursive;
+    font-weight: bold;
 }
+
+title {
+    color: #E84A5F;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+img {
+    max-width: 45rem;
+    /* margin-top: -10rem; */
+    background-color: #99B898;
+    border-radius: 30%;
+
+}
+
+.login-box {}
+
+/* color scheme */
+/* green 99B898 */
+/* yellow FECEAB */
+/* orange FF847C */
+/* red E84A5F */
