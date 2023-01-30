@@ -1,10 +1,11 @@
 """script for all form classes"""
 
 from flask_wtf import FlaskForm
-from wtforms import StringField
+from wtforms.fields import EmailField, PasswordField, StringField
 from wtforms.validators import DataRequired
 
 
 class LoginForm(FlaskForm):
-    email = StringField("email", validators=[DataRequired()])
-    password = StringField("password", validators=[DataRequired()])
+
+    email = EmailField("email", validators=[DataRequired()])
+    password = PasswordField("password", validators=[DataRequired()])

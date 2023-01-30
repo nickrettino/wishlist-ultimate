@@ -4,15 +4,22 @@
 
 {% block body %}
 {{ super() }}
-<h1 class="text_center">Login</h1>
+
 <div>
-    <div>
-        <div>
-            <form class="form" action="GET" action="{{url_for('login_page')}}"">
+    <div class="container">
+        <h1 class="text_center">Login</h1>
+        <div class="">
+            <form class="form" action="GET" action="{{url_for('login_page')}}">
                 {{ form.csrf_token }}
-                {{ form.email.label }} {{form.email(size=20)}} 
-                {{ form.password.label }} {{ form.password(size=20)}}
-                <input type=" submit" value="Login">
+                <div class="form-floating">
+                    {{ form.email(size=20) }}
+                    {{ form.email.label }}
+                </div>
+                <div class="form-floating">
+                    {{ form.password(size=20) }}
+                    {{ form.password.label }}
+                </div>
+                <input type="submit" value="Login">
             </form>
         </div>
     </div>
