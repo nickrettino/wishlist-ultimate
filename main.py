@@ -1,4 +1,6 @@
 """New website"""
+import os
+
 import flask_sqlalchemy
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -6,12 +8,16 @@ from flask_wtf import FlaskForm
 from wtforms import StringField
 from wtforms.validators import DataRequired
 
+"""repository imports"""
 from forms import LoginForm
+
+SECRET_KEY = os.urandom(32)
 
 
 def create_app():
     """use Bootsrap"""
     app = Flask(__name__)
+    app.config["SECRET_KEY"] = SECRET_KEY
     Bootstrap(app)
     return app
 
@@ -29,7 +35,7 @@ def homepage():
 def login_page():
     """login form requiring email and password which are sent to database"""
     login = LoginForm()
-    return render_template("login.html")
+    return render_template("login.html", form=login)
 
 
 if __name__ == "__main__":
